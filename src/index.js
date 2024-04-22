@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ParticlesContextProvider } from './contexts/particles-context';
 
+console.log('Index')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ParticlesContextProvider>
+      <App />
+    </ParticlesContextProvider>
   </React.StrictMode>
 );
 
